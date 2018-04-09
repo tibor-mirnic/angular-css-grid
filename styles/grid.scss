@@ -1,0 +1,101 @@
+$col-margin: 16px !default;
+$width-margin: 32px !default;
+
+.row {
+  *zoom: 1;
+  
+  &:before,
+  &:after {
+    content: '';
+	  display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.inner-row {
+	@extend .row;
+	margin-left: -16px;
+	margin-right: -16px;
+}
+
+.col-12 {
+	float: left;
+	width: calc(100% * 1 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-6 {
+	float: left;
+	width: calc(100% * 0.5 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-3 {
+	float: left;
+	width: calc(100% * 0.25 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-4 {
+	float: left;
+	width: calc(100% * 0.333333333333333 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-8 {
+	float: left;
+	width: calc(100% * 0.66667 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-9 {
+	float: left;
+	width: calc(100% * 0.75 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-7 {
+	float: left;
+	width: calc(100% * 0.58333 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-5 {
+	float: left;
+	width: calc(100% * 0.41667 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.col-2 {
+	float: left;
+	width: calc(100% * 0.166666666666667 - #{$width-margin});
+	margin-left: $col-margin;
+	margin-right: $col-margin;
+}
+
+.break-grid {
+  &.row,
+  >.row {
+    >.col-2,
+    >.col-3,
+    >.col-4,
+    >.col-5,
+    >.col-6,
+    >.col-7,
+    >.col-8,
+    >.col-9 {
+      width: calc(100% * 1 - #{$width-margin});
+    }
+  }
+}
