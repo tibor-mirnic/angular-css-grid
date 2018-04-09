@@ -13,8 +13,6 @@ export class ResizeHandlerService {
     this.handler = elementResizeDetectorMaker({
       strategy: 'scroll'
     });
-
-    // console.log('init');
   }
 
   listenTo(elementRef: ElementRef, breakingPoint: number, action: (brokeBelow: boolean) => void) {
