@@ -10,11 +10,6 @@ export class BreakGridDirective implements OnInit, OnDestroy{
 
   @Input() breakGrid: number;
 
-  public get documentWidth(): number {
-    const rect = document.body.getBoundingClientRect();
-    return rect.width;
-  }
-
   constructor(
     private element: ElementRef,
     private renderer: Renderer2,
