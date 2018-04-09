@@ -4,7 +4,7 @@ This CSS Grid uses [element-resize-detector](https://www.npmjs.com/package/eleme
 
 ## ResizeHandlerService
 
-Provide this service in app module
+Provide this service at application level, if using Angular CLI import it in `app.module`.
 
 ## Styles
 
